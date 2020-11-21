@@ -39,6 +39,7 @@ spec:
       }
       steps {
         echo "GitHub Org name: ${GITHUB_ORG_LOGIN}" 
+        checkout scm
         container('kubectl') {
           sh "mkdir -p ${GITHUB_ORG_LOGIN}"
           sh "cp *.yaml ${GITHUB_ORG_LOGIN}"
