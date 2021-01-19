@@ -39,7 +39,7 @@ spec:
       }
       steps {
         echo "GitHub Org name: ${GITHUB_ORG_LOGIN}" 
-        checkout scm
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: "https://github.com/${GITHUB_ORG_LOGIN}/cloudbees-ci-config-bundle.git"]]])
         container('kubectl') {
           sh "mkdir -p ${GITHUB_ORG_LOGIN}"
           sh "cp *.yaml ${GITHUB_ORG_LOGIN}"
