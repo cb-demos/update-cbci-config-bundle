@@ -26,7 +26,7 @@ spec:
     skipDefaultCheckout()
   }
   triggers {
-    eventTrigger jmespathQuery("ref=='refs/heads/main' && repository.name=='cloudbees-ci-config-bundle' && installation.id==13331969")
+    eventTrigger jmespathQuery("ref=='refs/heads/main' && repository.name=='cloudbees-ci-config-bundle' && installation.id=='13331969'")
   }
   stages {
     stage('Update Config Bundle') {
