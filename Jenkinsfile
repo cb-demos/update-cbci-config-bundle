@@ -35,7 +35,7 @@ spec:
         triggeredBy 'EventTriggerCause'
       }
       environment {
-        GITHUB_ORG_LOGIN="${currentBuild.getBuildCauses()[0].event.installation.account.login}"
+        GITHUB_ORG_LOGIN="${currentBuild.getBuildCauses()[0].event.repository.organization}"
       }
       steps {
         echo "GitHub Org name: ${GITHUB_ORG_LOGIN}" 
