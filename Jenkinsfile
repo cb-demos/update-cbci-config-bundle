@@ -1,4 +1,4 @@
-def nameSpace="cloudbees-core"
+def nameSpace="cloudbees-sda"
 pipeline {
   agent {
     kubernetes {
